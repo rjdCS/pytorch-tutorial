@@ -1,6 +1,7 @@
 import torch
 import os
 
+
 class Dictionary(object):
     def __init__(self):
         self.word2idx = {}
@@ -15,9 +16,10 @@ class Dictionary(object):
     
     def __len__(self):
         return len(self.word2idx)
-    
+
+
 class Corpus(object):
-    def __init__(self, path='./data'):
+    def __init__(self):
         self.dictionary = Dictionary()
 
     def get_data(self, path, batch_size=20):
